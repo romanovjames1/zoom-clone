@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const { v4: uuidV4 } = require("uuid");
-
+import v4 from "uuid";
+const uuidV4 = v4;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 

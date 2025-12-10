@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const app = express();
 import v4 from "uuid";
 const uuidV4 = v4;

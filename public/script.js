@@ -5,11 +5,14 @@ const myPeer = new Peer(undefined, {
   // port: "3001",
 });
 
+console.log(myPeer, "this is peeer thing");
 const peers = {};
 
 const myVideo = document.createElement("video");
+
 // for making the video muted to not listed ur own voice
 myVideo.muted = true;
+myVideo.reversed = true;
 
 navigator.mediaDevices
   .getUserMedia({
@@ -54,7 +57,7 @@ function connectToNewUser(userId, stream) {
   console.log(
     call.on("stream", (userVideoStream) => {
       addVideoStream(video, userVideoStream);
-    })
+    }),
   );
 
   call.on("close", () => {

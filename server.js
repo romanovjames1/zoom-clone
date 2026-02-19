@@ -1,7 +1,6 @@
-import express from "express";
+const express = require("express");
 const app = express();
-import v4 from "uuid";
-const uuidV4 = v4;
+const { v4: uuidV4 } = require("uuid");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
@@ -26,6 +25,6 @@ io.on("connection", (socket) => {
     });
   });
 });
-server.listen(8080, () => {
+server.listen(3000, () => {
   console.log("server is listening on: ", 3000);
 });

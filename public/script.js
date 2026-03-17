@@ -2,7 +2,7 @@ const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
   // url: "https://7ea82b425a7a.ngrok-free.app",
-  // port: "3001",
+  // port: "3001",     comment this is just for remingding me that this thing matters
 });
 
 console.log(myPeer, "this is peeer thing");
